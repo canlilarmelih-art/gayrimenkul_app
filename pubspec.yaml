@@ -1,5 +1,10 @@
 name: gayrimenkul_app
 description: Gayrimenkul değerleme uygulaması
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.9.0 <4.0.0'   # ✅ SDK constraint eklendi
+  flutter: ">=3.24.0"     # ✅ Flutter minimum versiyon eklendi
 
 dependencies:
   flutter:
@@ -8,6 +13,11 @@ dependencies:
   path_provider: ^2.1.2
   docx_template: ^0.4.3
   share_plus: ^8.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true
