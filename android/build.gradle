@@ -1,26 +1,33 @@
-// android/build.gradle
 
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
+// android/app/build.gradle
+
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    namespace "com.example.gayrimenkul_app"
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.example.gayrimenkul_app"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
     }
-    dependencies {
-        classpath "com.android.tools.build:gradle:8.3.0"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10"
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
     }
 }
 
-rootProject.buildDir = "../build"
-
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
+flutter {
+    source '../..'
 }
 
-subprojects {
-    project.evaluationDependsOn(":app")
-}
-
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10"
 }
