@@ -1,29 +1,22 @@
-
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'dev.flutter.flutter-gradle-plugin'
 }
 
 android {
-    namespace "com.example.app"
-    compileSdk 33
+    namespace "com.example.gayrimenkul_app"
+    compileSdkVersion 34
 
     defaultConfig {
-        applicationId "com.example.app"
-        minSdk 21
-        targetSdk 33
+        applicationId "com.example.gayrimenkul_app"
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
 }
 
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+flutter {
+    source '../..'
 }
