@@ -11,7 +11,6 @@ dependencies:
     sdk: flutter
   sqflite: ^2.3.0
   path_provider: ^2.1.2
-  docx_template: ^0.4.3
   share_plus: ^8.0.2
 
 dev_dependencies:
