@@ -9,8 +9,6 @@ dependencies:
     sdk: flutter
   sqflite: ^2.3.0
   path_provider: ^2.1.2
-  # docx_template paketinde bazen build sorunları oluyor, daha stabil sürüm kullanalım
-  docx_template: ^0.4.2
   share_plus: ^7.2.1
 
 dev_dependencies:
