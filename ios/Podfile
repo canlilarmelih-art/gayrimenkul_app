@@ -1,9 +1,9 @@
+# Placeholder iOS Podfile for Flutter project
 platform :ios, '11.0'
-
 use_frameworks!
 use_modular_headers!
 
 target 'Runner' do
-  use_frameworks!
-  use_modular_headers!
+  flutter_application_path = '../..'
+  eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
 end

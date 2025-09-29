@@ -10,10 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gayrimenkul App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Gayrimenkul Değerleme',
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomePage(),
     );
   }
@@ -26,7 +24,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Gayrimenkul Değerleme')),
-      body: const Center(child: Text('Hoşgeldiniz!')),
+      body: const Center(child: Text('Hoş geldiniz!')),
     );
   }
 }
