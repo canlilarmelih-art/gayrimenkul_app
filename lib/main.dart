@@ -1,17 +1,32 @@
 import 'package:flutter/material.dart';
-import 'screens/rapor_list_screen.dart';
 
 void main() {
-  runApp(GayrimenkulApp());
+  runApp(const MyApp());
 }
 
-class GayrimenkulApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gayrimenkul Değerleme',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: RaporListScreen(),
+      title: 'Gayrimenkul App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Gayrimenkul Değerleme')),
+      body: const Center(child: Text('Hoşgeldiniz!')),
     );
   }
 }
